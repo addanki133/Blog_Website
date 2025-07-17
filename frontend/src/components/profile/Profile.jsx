@@ -14,7 +14,7 @@ const Profile = () => {
   }, [token])
   userDataFun()
   async function userDataFun() {
-    const res = await axios.get(`${process.env.REACT_APP_API_URL}/api/auth/profile`, {
+    const res = await axios.get(`${import.meta.env.VITE_API_URL}/api/auth/profile`, {
       headers: {
         Authorization: `Beared ${token}`
       }
@@ -24,7 +24,7 @@ const Profile = () => {
 
   }
   async function handleDelete(id) {
-    const res = await axios.delete(`${process.env.REACT_APP_API_URL}/api/blogs/delete/${id}`, {
+    const res = await axios.delete(`${import.meta.env.VITE_API_URL}/api/blogs/delete/${id}`, {
       headers: {
         Authorization: `Beared ${token}`
       }

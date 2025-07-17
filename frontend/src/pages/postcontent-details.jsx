@@ -13,7 +13,7 @@ function PostContentDetailsPage() {
     }, [id])
     
    async function handleSinglePost() {
-       const res = await axios.get(`${process.env.REACT_APP_API_URL}/api/blogs/${id}`)
+       const res = await axios.get(`${import.meta.env.VITE_API_URL}/api/blogs/${id}`)
 
        const { data } = res?.data;   
        setSinglePost(data)

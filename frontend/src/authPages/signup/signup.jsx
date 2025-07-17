@@ -13,7 +13,7 @@ const SignupPage = () => {
 async function handleOnSubmit(e) {
     e.preventDefault()
     
-    const res = await axios.post(`${process.env.REACT_APP_API_URL}/api/auth/signup`, form)
+    const res = await axios.post(`${import.meta.env.VITE_API_URL}/api/auth/signup`, form)
     alert(res.data.msg)
     navigate('/login')
 

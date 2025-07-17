@@ -12,7 +12,7 @@ const LoginPage = () => {
         }
    async function handleOnSubmit(e) {
        e.preventDefault()
-       const res = await axios.post(`${process.env.REACT_APP_API_URL}/api/auth/login`, form)
+       const res = await axios.post(`${import.meta.env.VITE_API_URL}/api/auth/login`, form)
        console.log("Login response", res);
        alert(res?.data?.msg)
        

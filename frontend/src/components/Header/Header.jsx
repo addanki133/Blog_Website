@@ -43,7 +43,7 @@ const Header = () => {
   useEffect(() => {
     async function getPostData() {
       
-      const res = await axios.get('http://localhost:3000/api/blogs');
+      const res = await axios.get(`${process.env.REACT_APP_API_URL}/api/blogs`);
       setPostForm(res?.data?.data);
       
     }

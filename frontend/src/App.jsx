@@ -1,7 +1,7 @@
 
 import { Route, Routes } from 'react-router-dom'
 import './App.css'
-import Header from './components/Header/header'
+
 import Profile from './components/profile/Profile'
 import SignupPage from './authPages/signup/signup'
 import LoginPage from './authPages/login/login'

@@ -13,7 +13,7 @@ const PostPage = () => {
     async function handleOnSubmit(e) {
         e.preventDefault()
          
-        const res = await axios.post('http://localhost:3000/api/blogs/add', postForm, {
+        const res = await axios.post(`${process.env.REACT_APP_API_URL}/api/blogs/add`, postForm, {
             headers: {
                 Authorization:`Bearer ${token}`
             }
